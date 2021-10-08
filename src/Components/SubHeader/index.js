@@ -1,9 +1,5 @@
-import { Background } from "./style"
+import { Background } from "./style";
 const Subheader = () => {
-    return (
-        <Background>
-
-        </Background> 
-    )
-}
-export default Subheader
+  return <Background></Background>;
+};
+export default Subheader;

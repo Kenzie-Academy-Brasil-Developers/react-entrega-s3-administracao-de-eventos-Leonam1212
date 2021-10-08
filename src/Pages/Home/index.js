@@ -22,7 +22,7 @@ const Home = () => {
             expedita. 33 magnam sunt
           </p>
           <Link to="/drinks">
-            <Button blackSchema>Bebidas</Button>
+            <Button blackSchema>Ir para Bebidas</Button>
           </Link>
         </div>
         <Background>

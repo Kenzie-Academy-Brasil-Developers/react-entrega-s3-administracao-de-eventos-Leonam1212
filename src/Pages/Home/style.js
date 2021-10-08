@@ -72,7 +72,8 @@ export const Content = styled.div`
     }
 
     button {
-      width: 150px;
+      width: 160px;
+      font-size: 13px;
     }
   }
   img {

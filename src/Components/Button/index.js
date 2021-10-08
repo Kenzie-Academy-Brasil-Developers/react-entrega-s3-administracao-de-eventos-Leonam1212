@@ -1,9 +1,4 @@
 import { Container } from "./style";
-import { useContext } from "react";
-import { BebidasContext } from "../../Providers/Bebidas";
-import { ConfraternizacaoContext } from "../../Providers/Confraternização";
-import { FormaturaContext } from "../../Providers/Formatura";
-import { CasamentoContext } from "../../Providers/Casamento";
 
 const Button = ({
   children,
@@ -13,19 +8,6 @@ const Button = ({
   item,
   ...rest
 }) => {
-  const { bebidaCasamento, adicionarBebidaCasamento, removerBebidaCasamento } =
-    useContext(CasamentoContext);
-
-  const {
-    bebidaConfraternizacao,
-    adicionarBebidaConfraternizacao,
-    removerConfraternizacao,
-  } = useContext(ConfraternizacaoContext);
-
-  const { bebidaFormatura, adicionarBebidaFormatura, removerBebidaFormatura } =
-    useContext(FormaturaContext);
-
-
   return (
     <Container
       onClick={handleClick}

@@ -5,7 +5,7 @@ export const Container = styled.div`
   border-radius: 0.5rem;
   width: 95%;
   max-width: 1050px;
-  margin: -700px auto;
+  margin: -650px auto;
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
