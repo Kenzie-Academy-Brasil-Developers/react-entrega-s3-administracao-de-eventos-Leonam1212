@@ -22,10 +22,8 @@ export const Background = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    -webkit-filter: blur(15px);
-    -moz-filter: blur(15px);
-    -o-filter: blur(15px);
-    -ms-filter: blur(15px);
-    filter: blur(3px);
+   
+    /* filter: grayscale(0.4); */
+    filter: blur(5px);
   }
 `;

@@ -6,12 +6,11 @@ export const Header = styled.div`
   text-align: center;
   color: var(--whiteCity);
   h3 {
-    border-bottom: 1px solid var(--whiteCity);
     padding-bottom: 5px;
     padding-right: 3px;
-    width: 35%;
+    width: 90%;
     margin: 0 auto;
-    text-align: center;
+    text-align: right;
   }
 
   @media (min-width: 1100px) {
@@ -60,7 +59,7 @@ export const Content = styled.div`
       letter-spacing: 5px;
       color: var(--orange);
       @media (min-width: 1100px) {
-        font-size: 4rem;
+        font-size: 5rem;
         text-align: left;
       }
     }

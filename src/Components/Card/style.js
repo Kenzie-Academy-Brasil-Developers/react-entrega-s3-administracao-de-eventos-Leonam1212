@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.6); */
   border-radius: 0.5rem;
   width: 95%;
   max-width: 1050px;
@@ -15,7 +15,8 @@ export const Container = styled.div`
 
   h1 {
     width: 95%;
-    color: var(--whiteCity);
+    font-size: 46px;
+    color: var(--orange);
     padding: 20px;
   }
 `;

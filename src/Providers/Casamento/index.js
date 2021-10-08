@@ -5,17 +5,15 @@ export const CasamentoContext = createContext([]);
 
 export const CasamentoProvider = ({ children }) => {
   const [bebidaCasamento, setBebidaCasamento] = useState([]);
-
   const adicionarBebidaCasamento = (item) => {
-    if(!bebidaCasamento.includes(item)){
+    if (!bebidaCasamento.includes(item)) {
       setBebidaCasamento([...bebidaCasamento, item]);
     }
-    if(bebidaCasamento.includes(item)){
+    if (bebidaCasamento.includes(item)) {
       toast.error("Item já foi adicionado!!");
     }
   };
 
-  
   const removerBebidaCasamento = (item) => {
     const novaLista = bebidaCasamento.filter(
       (element) => element.id !== item.id
