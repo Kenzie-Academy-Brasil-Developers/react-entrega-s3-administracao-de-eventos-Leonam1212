@@ -18,7 +18,7 @@ export const FormaturaProvider = ({ children }) => {
     }
   };
 
-  console.log(bebidaFormatura);
+
   const removerBebidaFormatura = (item) => {
     const novaLista = bebidaFormatura.filter(
       (element) => element.id !== item.id
