@@ -7,10 +7,14 @@ export const Header = styled.div`
   color: var(--whiteCity);
   h3 {
     padding-bottom: 5px;
+    padding-top: 15px;
+    border-bottom: 1px solid var(--whiteCity);
     padding-right: 3px;
-    width: 90%;
+    font-size: 26px;
+    width: 30%;
+   letter-spacing: 1.5px;
     margin: 0 auto;
-    text-align: right;
+    text-align: center;
   }
 
   @media (min-width: 1100px) {

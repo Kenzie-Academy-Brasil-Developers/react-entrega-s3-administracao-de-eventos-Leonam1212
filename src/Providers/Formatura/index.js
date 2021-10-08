@@ -4,14 +4,17 @@ import { toast } from "react-toastify";
 export const FormaturaContext = createContext([]);
 
 export const FormaturaProvider = ({ children }) => {
-  const [bebidaFormatura, setBebidaFormatura] = useState([]);
+  const formatura = JSON.parse(localStorage.getItem("formatura")) || [];
+  const [bebidaFormatura, setBebidaFormatura] = useState(formatura);
 
   const adicionarBebidaFormatura = (item) => {
     if (!bebidaFormatura.includes(item)) {
+      formatura.push(item);
+      localStorage.setItem("formatura", JSON.stringify(formatura));
       setBebidaFormatura([...bebidaFormatura, item]);
     }
     if (bebidaFormatura.includes(item)) {
-        toast.error("Item já foi adicionado!!");
+      toast.error("Item já foi adicionado!!");
     }
   };
 
@@ -20,6 +23,7 @@ export const FormaturaProvider = ({ children }) => {
     const novaLista = bebidaFormatura.filter(
       (element) => element.id !== item.id
     );
+    localStorage.setItem("formatura", JSON.stringify(novaLista));
     setBebidaFormatura(novaLista);
   };
 

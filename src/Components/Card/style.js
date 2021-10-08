@@ -5,7 +5,7 @@ export const Container = styled.div`
   border-radius: 0.5rem;
   width: 95%;
   max-width: 1050px;
-  margin: -650px auto;
+  margin: -700px auto;
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
@@ -16,7 +16,7 @@ export const Container = styled.div`
   h1 {
     width: 95%;
     font-size: 46px;
-    color: var(--orange);
+    color: var(--whiteCity);
     padding: 20px;
   }
 `;

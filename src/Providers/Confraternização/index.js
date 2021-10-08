@@ -4,10 +4,17 @@ import { toast } from "react-toastify";
 export const ConfraternizacaoContext = createContext([]);
 
 export const ConfraternizacaoProvider = ({ children }) => {
-  const [bebidaConfraternizacao, setBebidaConfraternizacao] = useState([]);
+  const confraternizacao = JSON.parse(localStorage.getItem("confraternizacao")) || [];
+  const [bebidaConfraternizacao, setBebidaConfraternizacao] =
+    useState(confraternizacao);
 
   const adicionarBebidaConfraternizacao = (item) => {
     if (!bebidaConfraternizacao.includes(item)) {
+      confraternizacao.push(item);
+      localStorage.setItem(
+        "confraternizacao",
+        JSON.stringify(confraternizacao)
+      );
       setBebidaConfraternizacao([...bebidaConfraternizacao, item]);
     }
     if (bebidaConfraternizacao.includes(item)) {
@@ -19,6 +26,7 @@ export const ConfraternizacaoProvider = ({ children }) => {
     const novaLista = bebidaConfraternizacao.filter(
       (element) => element.name !== item.name
     );
+    localStorage.setItem("confraternizacao", JSON.stringify(novaLista));
     setBebidaConfraternizacao(novaLista);
   };
 
